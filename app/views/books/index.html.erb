@@ -1,2 +1,141 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+<table>
+<thead>
+  <tr>
+   <th>Title</th>
+   <th>Body</th>
+   <th colspan="3"></th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td>トラブル知らずのシステム設計</td>
+    <td>システム設計の要点を図解で説明してくれます</td>
+    <td>
+      <a class="show_73629" href="/books/73629">Show</a>
+    </td>
+    <td>
+      <a class="edit_73629" href="/books/73629/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73629" rel="nofollow" deta-method="delete" href="/books/73629">Destroy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>たのしいRuby</td>
+    <td>Rubyの入門におすすめです</td>
+    <td>
+      <a class="show_73630" href="/books/73630">Show</a>
+    </td>
+    <td>
+      <a class="edit_73630" href="/books/73630/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73630" rel="nofollow" deta-method="delete" href="/books/73630">Destroy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>入門Git</td>
+    <td>gitについての基本操作から内部構造まで解説してくれます</td>
+    <td>
+      <a class="show_73631" href="/books/73631">Show</a>
+    </td>
+    <td>
+      <a class="edit_73631" href="/books/73631/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73631" rel="nofollow" deta-method="delete" href="/books/73631">Destroy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>アルゴリズム図鑑</td>
+    <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
+    <td>
+      <a class="show_73632" href="/books/73632">Show</a>
+    </td>
+    <td>
+      <a class="edit_73632" href="/books/73632/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73632" rel="nofollow" deta-method="delete" href="/books/73632">Destroy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>達人プログラマー</td>
+    <td>プログラマ入門者は必読！</td>
+    <td>
+      <a class="show_73633" href="/books/73633">Show</a>
+    </td>
+    <td>
+      <a class="edit_73633" href="/books/73633/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73633" rel="nofollow" deta-method="delete" href="/books/73633">Destroy</a>
+    </td>
+  </tr>
+<tr>
+    <td>データベース実践入門</td>
+    <td>効率的なSQL文を教えてくれます</td>
+    <td>
+      <a class="show_73634" href="/books/73634">Show</a>
+    </td>
+    <td>
+      <a class="edit_73634" href="/books/73634/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73634" rel="nofollow" deta-method="delete" href="/books/73634">Destroy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>練習</td>
+    <td>更新エラー</td>
+    <td>
+      <a class="show_73635" href="/books/73635">Show</a>
+    </td>
+    <td>
+      <a class="edit_73635" href="/books/73635/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73635" rel="nofollow" deta-method="delete" href="/books/73635">Destroy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>投稿すると</td>
+    <td>test2</td>
+    <td>
+      <a class="show_73636" href="/books/73636">Show</a>
+    </td>
+    <td>
+      <a class="edit_73636" href="/books/73636/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73636" rel="nofollow" deta-method="delete" href="/books/73636">Destroy</a>
+    </td>
+  </tr>
+  <tr>
+    <td>投稿すると</td>
+    <td>test</td>
+    <td>
+      <a class="show_73636" href="/books/73636">Show</a>
+    </td>
+    <td>
+      <a class="edit_73636" href="/books/73636/edit">Edit</a>
+    </td>
+    <td>
+      <a deta-confirm="Are you sure?" class="destroy_73636" rel="nofollow" deta-method="delete" href="/books/73636">Destroy</a>
+    </td>
+  </tr>
+</table>
+</tbody>
+<h2>New book</h2>
+<%= form_with model: Book.new do |f| %>
+
+<h4>Title</h4>
+<%= f.text_field :title %>
+
+<h4>Body</h4>
+<%= f.text_area :body %>
+
+<%= f.submit 'Create Book' %>
+<% end %>
