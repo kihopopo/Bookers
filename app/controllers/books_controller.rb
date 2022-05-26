@@ -21,9 +21,9 @@ class BooksController < ApplicationController
   end
   
   def update
-    list = List.find(params[:id])
-    list.update(list_params)
-    redirect_to list_path(list.id)  
+    book = Book.find(params[:id])
+    book.update(list_params)
+    redirect_to book_path(list.id)  
   end
 
   def destroy
